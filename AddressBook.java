@@ -7,31 +7,33 @@ public class AddressBook {
     Contacts contact = new Contacts();
 
     public void addContact() {
-        System.out.println("enter no of persons to add");
-        int person = sc.nextInt();
-        Contacts[] contactArr = new Contacts[person];
-        for (int i = 0; i < person; i++) {
-            System.out.println("enter" + (i + 1));
-            System.out.println("Enter First Name");
-            contact.setFIRST_NAME(sc.next());
-            System.out.println("Enter last Name");
-            contact.setLAST_NAME(sc.next());
-            System.out.println("Enter Address");
-            contact.setADDRESS(sc.next());
-            System.out.println("Enter Your City Name");
-            contact.setCITY(sc.next());
-            System.out.println("Enter Your State");
-            contact.setSTATE(sc.next());
-            System.out.println("Enter Zip");
-            contact.setZip(sc.next());
-            System.out.println("Enter Phone Number");
-            contact.setPHONE_NUMBER(sc.next());
-            System.out.println("Enter Email");
-            contact.setEMAIL_ID(sc.next());
-            contactArr[i] = contact;
-        }
-        for (int i = 0; i < person; i++) {
-            System.out.println(contactArr[i]);
+        System.out.println("Enter First Name");
+        contact.setFIRST_NAME(sc.next());
+        System.out.println("Enter last Name");
+        contact.setLAST_NAME(sc.next());
+        System.out.println("Enter Address");
+        contact.setADDRESS(sc.next());
+        System.out.println("Enter Your City Name");
+        contact.setCITY(sc.next());
+        System.out.println("Enter Your State");
+        contact.setSTATE(sc.next());
+        System.out.println("Enter Zip");
+        contact.setZip(sc.next());
+        System.out.println("Enter Phone Number");
+        contact.setPHONE_NUMBER(sc.next());
+        System.out.println("Enter Email");
+        contact.setEMAIL_ID(sc.next());
+        System.out.println(contact);
+    }
+
+    public void editContact() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name to Edit :  ");
+        String name = sc.nextLine();
+        if (contact.getFIRST_NAME().equals(name)) {
+            addContact();
+        } else {
+            System.out.println("Name is not present");
         }
     }
 }
