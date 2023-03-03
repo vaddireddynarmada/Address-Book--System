@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class AddressBook {
@@ -26,12 +28,13 @@ public class AddressBook {
         System.out.println(contact);
     }
 
-    public void editContact() {
+    public void deleteContact() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter name to Edit :  ");
         String name = sc.nextLine();
         if (contact.getFIRST_NAME().equals(name)) {
-            addContact();
+            contact = null;
+            System.out.println(contact);
         } else {
             System.out.println("Name is not present");
         }
