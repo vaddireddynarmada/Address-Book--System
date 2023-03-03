@@ -8,6 +8,8 @@ public class Contacts {
     private String PHONE_NUMBER;
     private String EMAIL_ID;
 
+    public Contacts() {
+    }
     public Contacts(String FIRST_NAME, String LAST_NAME, String ADDRESS,
                     String CITY, String STATE, String zip, String PHONE_NUMBER, String EMAIL_ID) {
         this.FIRST_NAME = FIRST_NAME;
@@ -86,8 +88,15 @@ public class Contacts {
 
     @Override
     public String toString() {
-        return "First Name:" + FIRST_NAME + "\nLast Name:" + LAST_NAME + "\nAddress:" + ADDRESS +
-                "\nState:" + STATE + "\nCity:" + CITY + "\nZIP:" + zip + "\nPhone:" + PHONE_NUMBER + "\nEmail:" + EMAIL_ID;
-
+        return "Contacts{" +
+                "FIRST_NAME='" + FIRST_NAME + '\'' +
+                ", LAST_NAME='" + LAST_NAME + '\'' +
+                ", ADDRESS='" + ADDRESS + '\'' +
+                ", CITY='" + CITY + '\'' +
+                ", STATE='" + STATE + '\'' +
+                ", zip='" + zip + '\'' +
+                ", PHONE_NUMBER='" + PHONE_NUMBER + '\'' +
+                ", EMAIL_ID='" + EMAIL_ID + '\'' +
+                '}';
     }
 }
